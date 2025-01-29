@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./score-css/score.css" />
+  </head>
+  <body>
+    <div class="default-info">
+      <svg width="150" height="400">
+        <use href="../media/score-layout.svg#icon-format-n-timer"></use>
+      </svg>
+      <div class="format-n-timer">
+        <p class="format-text">bo3</p>
+        <p class="versus-text">vs</p>
+        <p class="timer-text">00:00</p>
+      </div>
+    </div>
+    <div class="teams">
+      <div class="left-team">
+        <svg width="810" height="150">
+          <use href="../media/score-layout.svg#icon-team-name-n-score"></use>
+        </svg>
+        <p class="left-team-name teams-text">Natus Vincere</p>
+        <p class="left-team-score teams-text">2</p>
+        <div class="left-team-players">
+          <p id="players-text" class="players-text">
+            Liazz • dexter • Alistair • INS • Vexite
+          </p>
+        </div>
+      </div>
+      <div class="right-team">
+        <svg width="810" height="150" style="transform: rotate(180deg)">
+          <use href="../media/score-layout.svg#icon-team-name-n-score"></use>
+        </svg>
+        <p class="right-team-name teams-text">FlyQuest</p>
+        <p class="right-team-score teams-text">0</p>
+        <div class="right-team-players">
+          <p id="players-text" class="players-text">
+            Liazz • dexter • Alistair • INS • Vexite
+          </p>
+        </div>
+      </div>
+    </div>
+    <script src="./score-js/score.js"></script>
+  </body>
+</html>

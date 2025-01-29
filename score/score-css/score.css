@@ -1,0 +1,171 @@
+/* exo-2-800 - cyrillic_latin */
+@font-face {
+    font-display: swap;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../fonts/exo-2-v24-cyrillic_latin-800.woff2') format('woff2'),
+        url('../../fonts/exo-2-v24-cyrillic_latin-800.ttf') format('truetype');
+}
+
+body
+{
+    width: 1920px;
+    height: 1080px;
+    background-color: #EC6605;
+    margin: 0;
+
+    font-family: 'Exo 2', sans-serif;
+    font-size: 35px;
+    color: white;
+    text-align: center;
+
+    overflow: hidden;
+}
+
+.default-info
+{
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+
+    margin: 175px auto 0;
+
+    width: 150px;
+    height: 400px;
+    fill: #D2042D;
+}
+
+.format-n-timer
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    justify-content: space-between;
+}
+
+.format-text
+{
+    margin: 45px 0 0;
+    text-transform: lowercase;
+}
+
+.versus-text
+{
+    margin: 0;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+.timer-text
+{
+    margin: 0 0 45px;
+    text-transform: uppercase;
+}
+
+.teams
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 300px 0 0 150px;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: row;
+}
+
+.teams-text
+{
+    position: absolute;
+    font-size: 60px;
+    text-transform: uppercase;
+
+    top: 0;
+}
+
+.left-team
+{
+    position: relative;
+}
+
+.left-team-name
+{
+    color: black;
+    width: 500px;
+
+    left: 0;
+    margin: 39px 0 0 93px;
+}
+
+.left-team-score
+{
+    left: 0;
+    margin: 36px 0 0 664px;
+}
+
+.left-team-players
+{
+    position: absolute;
+    width: 500px;
+    height: 572px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 55.5%, rgba(0, 0, 0, 0) 96%);
+
+    top: 0;
+    left: 0;
+    z-index: -1;
+
+    margin: 33px 0 0 93px;
+}
+
+.players-text
+{
+    margin-top: 158px;
+    font-size: 30px;
+}
+
+.players-text span
+{
+    display: block;
+    text-align: center;
+}
+
+.right-team
+{
+    position: relative;
+}
+
+.right-team-name
+{
+    color: black;
+    width: 500px;
+
+    right: 0;
+    margin: 39px 93px 0 0;
+}
+
+.right-team-score
+{
+    right: 0;
+    margin: 36px 664px 0 0;
+}
+
+.right-team-players {
+    position: absolute;
+    width: 500px;
+    height: 572px;
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 55.5%, rgba(0, 0, 0, 0) 96%);
+
+    top: 0;
+    right: 0;
+    z-index: -1;
+
+    margin: 33px 93px 0 0;
+}
