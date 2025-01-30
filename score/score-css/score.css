@@ -1,4 +1,3 @@
-/* exo-2-800 - cyrillic_latin */
 @font-face {
     font-display: swap;
     font-family: 'Exo 2';
@@ -6,6 +5,12 @@
     font-weight: 800;
     src: url('../../fonts/exo-2-v24-cyrillic_latin-800.woff2') format('woff2'),
         url('../../fonts/exo-2-v24-cyrillic_latin-800.ttf') format('truetype');
+}
+
+:root {
+    --duration-delay: 2s;
+    --duration-default-animation: 0.5s;
+    --duration-bg-animation: 1s;
 }
 
 body
@@ -26,17 +31,39 @@ body
 .default-info
 {
     position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
+    top: 175px;
     z-index: 2;
 
-    margin: 175px auto 0;
+    margin: 0 auto;
 
     width: 150px;
     height: 400px;
-    fill: #D2042D;
+    background-color: #D2042D;
+    border-radius: 100px;
+
+    opacity: 0;
+    visibility: hidden;
+    animation: var(--duration-default-animation) ease-in-out default-anim forwards;
+    animation-delay: var(--duration-delay);
+}
+
+@keyframes default-anim {
+    0% {
+        opacity: 0;
+        transform: rotate(90deg);
+        visibility: visible;
+    }
+
+    50%
+    {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+        visibility: visible;
+    }
 }
 
 .format-n-timer
@@ -89,11 +116,26 @@ body
     text-transform: uppercase;
 
     top: 0;
+
+    z-index: 3;
+}
+
+.left-team, .right-team
+{
+    position: relative;
+    width: 810px;
+    height: 150px;
+    background-color: white;
 }
 
 .left-team
 {
-    position: relative;
+    border-radius: 100px 0 0 100px;
+}
+
+.right-team
+{
+    border-radius: 0 100px 100px 0;
 }
 
 .left-team-name
@@ -108,10 +150,28 @@ body
 .left-team-score
 {
     left: 0;
-    margin: 36px 0 0 664px;
+    margin: 36px 0 0 60px;
 }
 
-.left-team-players
+.left-team-score-bg, .right-team-score-bg
+{
+    background-color: #D2042D;
+    width: 200px;
+    height: 150px;
+
+    position: absolute;
+    top: 0;
+}
+
+.left-team-score-bg
+{
+    left: 0;
+    border-radius: 100px 0 0 100px;
+
+    margin-left: 610px;
+}
+
+.left-team-players, .right-team-players
 {
     position: absolute;
     width: 500px;
@@ -119,9 +179,12 @@ body
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 55.5%, rgba(0, 0, 0, 0) 96%);
 
     top: 0;
-    left: 0;
-    z-index: -1;
+    z-index: -2;
+}
 
+.left-team-players
+{
+    left: 0;
     margin: 33px 0 0 93px;
 }
 
@@ -137,11 +200,6 @@ body
     text-align: center;
 }
 
-.right-team
-{
-    position: relative;
-}
-
 .right-team-name
 {
     color: black;
@@ -154,18 +212,94 @@ body
 .right-team-score
 {
     right: 0;
-    margin: 36px 664px 0 0;
+    margin: 36px 60px 0 0;
 }
 
 .right-team-players {
-    position: absolute;
-    width: 500px;
-    height: 572px;
-    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 55.5%, rgba(0, 0, 0, 0) 96%);
-
-    top: 0;
+    
     right: 0;
-    z-index: -1;
-
     margin: 33px 93px 0 0;
+}
+
+.right-team-score-bg
+{
+    right: 0;
+    border-radius: 0 100px 100px 0;
+
+    margin-right: 610px;
+}
+
+.animation-bg-1, .animation-bg-2, .animation-bg-3
+{
+    position: absolute;
+    background-color: #EC6605;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+
+.animation-bg-1
+{
+    left: -50%;
+    z-index: 2;
+
+    animation: var(--duration-bg-animation) ease-out bg-anim forwards;
+    animation-delay: calc(var(--duration-delay) + 0.25s);
+}
+
+@keyframes bg-anim
+{
+    0%
+    {
+        transform: translateX(0);
+    }
+
+    100%
+    {
+        transform: translateX(-50%);
+    }
+}
+
+.animation-bg-2
+{
+    right: -50%;
+    z-index: 2;
+
+    animation: var(--duration-bg-animation) ease-out bg-anim-2 forwards;
+    animation-delay: calc(var(--duration-delay) + 0.25s);
+}
+
+@keyframes bg-anim-2
+{
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(50%);
+    }
+}
+
+.animation-bg-3
+{
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 0;
+    width: 1620px;
+    height: 600px;
+    
+    animation: var(--duration-bg-animation) ease-in-out bg-anim-3 forwards;
+    animation-delay: calc(var(--duration-delay) - 0.05s + var(--duration-bg-animation));
+}
+
+@keyframes bg-anim-3
+{
+    0% {
+        transform: translateY(0);
+    }
+
+    100% {
+        transform: translateY(80%);
+    }
 }

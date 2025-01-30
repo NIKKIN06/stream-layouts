@@ -1,0 +1,27 @@
+{
+    "ui-info":
+    {
+        "ui-score":
+        {
+            "teams":
+            [
+                {
+                    "name": "Navi",
+                    "points": 2,
+                    "players": "Aleksib • b1t • jL • w0nderful • iM"
+                },
+                {
+                    "name": "Flyquest",
+                    "points": 0,
+                    "players": "Liazz • dexter • Alistair • INS • Vexite"
+                }
+            ],
+            "timer":                    
+            {
+                "minutes": 0,
+                "seconds": 10
+            },
+            "format": "bo3"
+        }
+    }
+}
