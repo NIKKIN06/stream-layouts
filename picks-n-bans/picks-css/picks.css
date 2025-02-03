@@ -1,0 +1,117 @@
+@font-face {
+    font-display: swap;
+    font-family: 'Exo 2';
+    font-style: normal;
+    font-weight: 800;
+    src: url('../../fonts/exo-2-v24-cyrillic_latin-800.woff2') format('woff2'),
+        url('../../fonts/exo-2-v24-cyrillic_latin-800.ttf') format('truetype');
+}
+
+:root {
+    --color-main-background: #004F7F;
+    --color-pick-bg: #A6CE39;
+    --color-ban-bg: #D2042D;
+    --color-text: #FFFFFF;
+}
+
+body {
+    background-color: var(--color-main-background);
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    margin: 0;
+
+    font-family: 'Exo 2', sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-text);
+}
+
+h1 {
+    font-family: 'Exo 2', sans-serif;
+    font-size: 120px;
+    text-transform: uppercase;
+    text-align: center;
+    color: var(--color-text);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 100px 0 0 630px;
+}
+
+.maps {
+    border-radius: 50%;
+}
+
+.upper-section {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 294px 0 0 212px;
+    display: flex;
+    width: 1029px;
+    justify-content: space-between;
+}
+
+.middle-section {
+    margin-top: 294px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.ban-bg {
+    margin-left: 137px;
+}
+
+.decider {
+    width: auto;
+    height: 100%;
+    margin-left: 7px;
+}
+
+.pick-or-ban {
+    position: absolute;
+    width: 390px;
+    height: 185.85px;
+    left: 0;
+    top: 0;
+    margin: 542px 0 0 530px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.middle-text {
+    z-index: 1;
+    margin: 0;
+    color: var(--color-main-background);
+    font-size: 60px;
+    letter-spacing: 0.4em;
+    text-indent: 0.4em;
+}
+
+.pick-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    margin: 544px 0 0 530px;
+    fill: var(--color-pick-bg);
+}
+
+.lower-section {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    margin: 0 0 100px 212px;
+
+    display: flex;
+    width: 1029px;
+    justify-content: space-between;
+}

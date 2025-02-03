@@ -6,8 +6,8 @@
             "teams":
             [
                 {
-                    "name": "Navi",
-                    "points": 2,
+                    "name": "navi",
+                    "points": 0,
                     "players": "Aleksib • b1t • jL • w0nderful • iM"
                 },
                 {
@@ -18,10 +18,10 @@
             ],
             "timer":                    
             {
-                "minutes": 0,
-                "seconds": 10
+                "minutes": 1,
+                "seconds": 0
             },
-            "format": "bo3"
+            "format": "bo1"
         }
     }
 }
