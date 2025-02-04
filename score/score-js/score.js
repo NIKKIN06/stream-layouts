@@ -10,7 +10,7 @@ fetch('../../user-info/user-info.json')
     document.getElementById('left-team-players').textContent = data['ui-info']['ui-score']['teams'][0].players;
     document.getElementById('right-team-players').textContent = data['ui-info']['ui-score']['teams'][1].players;
     
-    document.getElementById('format-text').textContent = data['ui-info']['ui-score']['format'];
+    document.getElementById('format-text').textContent = data['ui-info']['format'];
 
     let minutes = data['ui-info']['ui-score']['timer'].minutes;
     let seconds = data['ui-info']['ui-score']['timer'].seconds;

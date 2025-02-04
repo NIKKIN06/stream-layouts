@@ -20,8 +20,21 @@
             {
                 "minutes": 1,
                 "seconds": 0
-            },
-            "format": "bo1"
+            }            
+        },
+        "format": "bo1",
+        "ui-picks":
+        {
+            "map-1": "mirage",
+            "map-2": "dust2",
+
+            "map-3": "inferno",
+            "map-4": "nuke",
+
+            "map-5": "anubis",
+            "map-6": "ancient",
+
+            "map-7": "train"
         }
     }
 }
